@@ -489,8 +489,8 @@ lua require("which-key").setup()
 lua << EOF
 local wk = require("which-key")
 wk.add({
-  -- Fold commands (z-prefix)
-  { "z",  group = "fold / scroll" },
+  -- Folds (z-prefix)
+  { "z",  group = "fold/scroll" },
   { "zM", desc = "Close ALL folds (collapse to signatures)" },
   { "zR", desc = "Open ALL folds" },
   { "za", desc = "Toggle fold under cursor" },
@@ -505,7 +505,7 @@ wk.add({
   { "zt", desc = "Scroll current line to top" },
   { "zb", desc = "Scroll current line to bottom" },
 
-  -- Goto / coc navigation (you already have these mapped)
+  -- Goto (CoC)
   { "g",  group = "goto" },
   { "gd", desc = "Goto definition" },
   { "gy", desc = "Goto type definition" },
@@ -520,19 +520,21 @@ wk.add({
   { "]c", desc = "Next git hunk" },
   { "[c", desc = "Previous git hunk" },
 
-  -- Leader groups (so the popup labels them nicely)
+  -- Leader groups
   { "<leader>f", group = "find (telescope)" },
   { "<leader>g", group = "git" },
   { "<leader>h", group = "hunk (gitsigns)" },
   { "<leader>l", group = "leetcode" },
+
+  -- Individual leader mappings
   { "<leader>o",  desc = "Aerial: toggle outline pane" },
   { "<leader>fs", desc = "Find symbols (aerial)" },
-  { "<leader>e", desc = "NERDTree: focus" },
-  { "<leader>t", desc = "NERDTree: toggle" },
-  { "<leader>m", desc = "Markdown preview toggle" },
-  { "<leader>s", desc = "Format with prettier" },
-  { "<leader>L", desc = "Flash: continue search" },
-  { "<leader>T", desc = "Flash: treesitter nodes" },
+  { "<leader>e",  desc = "NERDTree: focus" },
+  { "<leader>t",  desc = "NERDTree: toggle" },
+  { "<leader>m",  desc = "Markdown preview toggle" },
+  { "<leader>s",  desc = "Format with prettier" },
+  { "<leader>L",  desc = "Flash: continue search" },
+  { "<leader>T",  desc = "Flash: treesitter nodes" },
 })
 EOF
 
