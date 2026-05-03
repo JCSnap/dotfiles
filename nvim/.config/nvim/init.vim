@@ -24,7 +24,7 @@ call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}  " Auto Completion (use release branch — pre-built, stable)
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
