@@ -1,0 +1,136 @@
+% shell, shortcuts
+
+# Ctrl-R — atuin history search (just press Ctrl-R)
+echo "press Ctrl-R for atuin history"
+
+# Ctrl-T — fzf file picker, inserts path at cursor
+echo "press Ctrl-T for fzf file picker"
+
+# Alt-C — fzf cd into subdirectory
+echo "press Alt-C for fzf cd"
+
+# z <dir> — jump to a frecent directory via zoxide
+z <dir>
+
+# zi — interactive zoxide picker
+zi
+
+# atuin sync history across machines (after register)
+atuin sync
+
+# atuin re-import current shell history
+atuin import auto
+
+
+% claude
+
+# launch cc1 (pro account)
+cc1
+
+# launch cc2 (max account, uses ~/.claude-2)
+cc2
+
+# show usage limits for cc1
+cc1-usage
+
+# show usage limits for cc2
+cc2-usage
+
+
+% kitty, images
+
+# show an image inline in kitty (PNG/JPG/GIF/WebP/SVG)
+icat <file>
+
+
+% projects, cd
+
+# cd into tippytop
+tt
+
+
+% nvim, folds and outline
+
+# in nvim: collapse ALL folds — file shrinks to function signatures
+echo "press zM in nvim normal mode"
+
+# in nvim: expand ALL folds
+echo "press zR in nvim normal mode"
+
+# in nvim: toggle fold under cursor
+echo "press za"
+
+# in nvim: open / close fold under cursor (one-way)
+echo "zo opens, zc closes"
+
+# in nvim: toggle/open/close fold AND all nested folds
+echo "zA / zO / zC (capital = recursive)"
+
+# in nvim: jump to next/previous fold
+echo "zj / zk"
+
+# in nvim: toggle aerial symbol outline pane
+echo "press <Space>o (leader=Space)"
+
+# in nvim: fuzzy-find any symbol in the file
+echo "press <Space>O"
+
+# in nvim: jump to next/previous symbol (works anywhere)
+echo "press } or {"
+
+
+% nvim, which-key
+
+# remember nvim leader bindings — press leader and wait
+echo "press <Space> in normal mode and wait 300ms — popup shows all bindings"
+
+# remember z-prefix (folds) — press z and wait
+echo "press z in normal mode and wait — popup shows all fold commands"
+
+# remember g-prefix (goto) — press g and wait
+echo "press g in normal mode and wait — popup shows gd / gy / gi / gr"
+
+
+% fd, find files by name
+
+# find files matching a name pattern, recursively (respects .gitignore)
+fd <pattern>
+
+# find by extension (e.g. all .ts files)
+fd -e <ext>
+
+# include hidden files (dotfiles)
+fd -H <pattern>
+
+# include gitignored files
+fd -I <pattern>
+
+# search a specific directory
+fd <pattern> <dir>
+
+# only directories
+fd --type d <pattern>
+
+
+% rg, grep file contents
+
+# search for text in all files, recursively (respects .gitignore)
+rg <text>
+
+# case-insensitive
+rg -i <text>
+
+# only in files of a given type (e.g. ts, py, md)
+rg -t <type> <text>
+
+# show 3 lines of context around each match
+rg -C 3 <text>
+
+# list only file names that contain a match
+rg -l <text>
+
+# search hidden + gitignored too
+rg -uu <text>
+
+# regex with capture groups (default: smart-case regex)
+rg '<regex>'

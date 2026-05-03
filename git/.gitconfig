@@ -1,0 +1,30 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = JCSnap
+	email = e0970167@u.nus.edu
+
+[alias]
+  amendpush = "!f() { git commit --amend -m \"$1\" && git push origin $(git rev-parse --abbrev-ref HEAD) --force; }; f" # change the commit message of the last commit that have been pushed to remote branch
+  softreset = reset --soft HEAD~1 # undo the last commit, but keep the changes in the staging area
+  unstage = reset HEAD --
+  p = push origin main
+[http]
+	bufferSize = 512k
+	version = HTTP/1.1
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	features = catppuccin-mocha
+	syntax-theme = Catppuccin Mocha
+	line-numbers = true
+[include]
+	path = ~/.config/delta/catppuccin.gitconfig
+[merge]
+	conflictStyle = zdiff3

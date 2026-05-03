@@ -1,0 +1,17 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "suggest.enablePreselect": false,
+  "suggest.selection": "first",
+  "suggest.noselect": true,
+  "python.linting.enabled": false,
+  "python.linting.pylsEnabled": false,
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "hie.yaml", ".git"],
+      "filetypes": ["haskell", "lhaskell"],
+      "settings": {}
+    }
+  }
+}

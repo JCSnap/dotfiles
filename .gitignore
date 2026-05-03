@@ -1,0 +1,12 @@
+# Defensive: never commit anything that smells like a secret.
+**/auth*
+**/*token*
+**/*secret*
+**/credentials*
+**/.env
+**/.env.*
+*.key
+*.pem
+
+# macOS
+.DS_Store
